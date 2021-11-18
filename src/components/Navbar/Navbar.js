@@ -1,10 +1,15 @@
+import { useContext } from "react";
+
 import styles from "./Navbar.module.css";
+import DrawContext from "../../store/draw-context";
 import githubLogo from "../../assets/github-logo.png";
 import linkedinLogo from "../../assets/linkedin-logo.png";
 
 const Navbar = () => {
+  const drawContext = useContext(DrawContext);
+
   return (
-    <div className={styles.navbar}>
+    <div className={styles.navbar} style={{backgroundColor: drawContext.color}}>
       <h1>Mighty Draw</h1>
       <div className={styles.logos}>
         <a

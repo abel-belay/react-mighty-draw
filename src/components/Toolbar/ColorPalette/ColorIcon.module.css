@@ -1,0 +1,7 @@
+.blob {
+  width: 3.125rem;
+}
+
+.blob:hover {
+  cursor: pointer;
+}

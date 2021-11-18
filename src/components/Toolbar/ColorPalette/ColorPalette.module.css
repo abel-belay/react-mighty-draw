@@ -1,0 +1,23 @@
+.color-palette {
+  width: 55%;
+  height: 80%;
+  padding: 0 1.4rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  border-radius: 0 0 15px 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.color-palette img {
+  width: 3.125rem;
+}
+
+.blob {
+  fill: red;
+}

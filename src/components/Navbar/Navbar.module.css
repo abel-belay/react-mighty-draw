@@ -2,7 +2,7 @@
   width: 95vw;
   height: 6rem;
   padding: 0 5%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);

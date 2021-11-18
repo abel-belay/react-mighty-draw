@@ -1,29 +1,31 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useContext, useState } from "react";
+import DrawContext from "../../store/draw-context";
 
 import styles from "./Canvas.module.css";
 
 const Canvas = () => {
-  const props= {
-    color: "rgb(255,0,0)"
-  }
+  const drawContext = useContext(DrawContext);
+  const [c, setC] = useState();
 
   const canvasRef = useRef();
-  let canvas;
-  let c;
+  // const [canvasState, setCanvasState] = useState(canvasRef);
+
   let isDrawing = false;
 
   useEffect(() => {
-    canvas = canvasRef.current;
+    let canvas = canvasRef.current;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    c = canvas.getContext("2d");
+    setC(canvas.getContext("2d"));
+
   }, []);
 
   const mouseDownHandler = (e) => {
+    c.lineCap = "round";
     isDrawing = true;
     c.beginPath();
-    c.strokeStyle = props.color;
-    c.lineWidth = 10;
+    c.strokeStyle = drawContext.color;
+    c.lineWidth = drawContext.lineWidth;
     c.moveTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
     c.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
     c.stroke();
@@ -47,6 +49,11 @@ const Canvas = () => {
   const mouseLeaveHandler = (e) => {
     isDrawing = false;
   };
+
+  window.addEventListener("resize", () => {
+    canvasRef.current.width = window.innerWidth;
+    canvasRef.current.height = window.innerHeight;
+  })
 
   return (
     <canvas
