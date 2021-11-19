@@ -8,6 +8,7 @@ const ColorIcon = (props) => {
 
   const colorClickHandler = () => {
     drawContext.onColorChange(props.color);
+    drawContext.onPencilClick();
   }
 
   return (

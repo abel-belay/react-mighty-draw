@@ -17,22 +17,27 @@ const Canvas = () => {
     let canvas = canvasRef.current;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    let context = canvas.getContext("2d");
+    context.fillStyle="white";
+    context.fillRect(0, 0, canvas.width, canvas.height);
     setC(canvas.getContext("2d"));
   }, []);
 
   const mouseDownHandler = (e) => {
-    c.lineCap = "round";
-    isDrawing = true;
-    c.beginPath();
-    if (drawContext.isErasing) {
-      c.strokeStyle = "white";
-    } else {
-      c.strokeStyle = drawContext.color;
+    if (e.button === 0) {
+      c.lineCap = "round";
+      isDrawing = true;
+      c.beginPath();
+      if (drawContext.isErasing) {
+        c.strokeStyle = "white";
+      } else {
+        c.strokeStyle = drawContext.color;
+      }
+      c.lineWidth = drawContext.lineWidth;
+      c.moveTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
+      c.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
+      c.stroke();
     }
-    c.lineWidth = drawContext.lineWidth;
-    c.moveTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
-    c.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
-    c.stroke();
   };
 
   const mouseMoveHandler = (e) => {
