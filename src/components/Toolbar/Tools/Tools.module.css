@@ -1,0 +1,27 @@
+.tools {
+  width: 14.25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tools button {
+  width: 40%;
+  min-width: 2.5rem;
+  max-width: 4rem;
+  background: none;
+  border: none;
+}
+.tools button:hover {
+  cursor: pointer;
+}
+
+.tools img {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.selected img {
+  opacity: 1;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}

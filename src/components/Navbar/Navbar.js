@@ -15,12 +15,14 @@ const Navbar = () => {
         <a
           href="https://github.com/abel-belay/react-mighty-draw"
           target="_blank"
+          rel="noreferrer" 
         >
           <img src={githubLogo} alt="Github logo." />
         </a>
         <a
           href="https://www.linkedin.com/in/abel-belay-ab5b50221"
           target="_blank"
+          rel="noreferrer" 
         >
           <img src={linkedinLogo} alt="Linkedin logo." />
         </a>

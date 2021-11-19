@@ -1,5 +1,6 @@
 .navbar {
   width: 95vw;
+  max-width: 1500px;
   height: 6rem;
   padding: 0 5%;
   position: fixed;

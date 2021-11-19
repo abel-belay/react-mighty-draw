@@ -1,14 +1,17 @@
 .color-palette {
   width: 55%;
   height: 80%;
-  padding: 0 1.4rem;
+  padding: 0 1rem;
+
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
+
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
   border-radius: 0 0 15px 15px;
   background-color: rgba(255, 255, 255, 0.8);

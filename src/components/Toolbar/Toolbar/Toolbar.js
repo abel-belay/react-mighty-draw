@@ -1,8 +1,10 @@
 import { useContext } from "react";
 
 import styles from "./Toolbar.module.css";
-import ColorPalette from "../ColorPalette/ColorPalette";
 import DrawContext from "../../../store/draw-context";
+import ColorPalette from "../ColorPalette/ColorPalette";
+import SizeInput from "../Size/SizeInput";
+import Tools from "../Tools/Tools";
 
 const Toolbar = () => {
   const drawContext = useContext(DrawContext);
@@ -11,7 +13,9 @@ const Toolbar = () => {
       className={styles.toolbar}
       style={{ backgroundColor: drawContext.color }}
     >
+      <Tools />
       <ColorPalette />
+      <SizeInput />
     </div>
   );
 };

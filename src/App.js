@@ -6,7 +6,6 @@ import Canvas from "./components/Canvas/Canvas";
 import Toolbar from "./components/Toolbar/Toolbar/Toolbar";
 
 function App() {
-  console.log("development build");
   return (
     <React.Fragment>
       <Navbar />

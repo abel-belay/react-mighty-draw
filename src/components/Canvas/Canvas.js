@@ -8,7 +8,8 @@ const Canvas = () => {
   const [c, setC] = useState();
 
   const canvasRef = useRef();
-  // const [canvasState, setCanvasState] = useState(canvasRef);
+  
+  console.log(drawContext.isErasing);
 
   let isDrawing = false;
 
@@ -17,14 +18,17 @@ const Canvas = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     setC(canvas.getContext("2d"));
-
   }, []);
 
   const mouseDownHandler = (e) => {
     c.lineCap = "round";
     isDrawing = true;
     c.beginPath();
-    c.strokeStyle = drawContext.color;
+    if (drawContext.isErasing) {
+      c.strokeStyle = "white";
+    } else {
+      c.strokeStyle = drawContext.color;
+    }
     c.lineWidth = drawContext.lineWidth;
     c.moveTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
     c.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
@@ -49,11 +53,6 @@ const Canvas = () => {
   const mouseLeaveHandler = (e) => {
     isDrawing = false;
   };
-
-  window.addEventListener("resize", () => {
-    canvasRef.current.width = window.innerWidth;
-    canvasRef.current.height = window.innerHeight;
-  })
 
   return (
     <canvas
