@@ -1,4 +1,4 @@
-import { useContext } from "react/cjs/react.development";
+import { useContext } from "react";
 import DrawContext from "../../../store/draw-context";
 import styles from "./SizeInput.module.css";
 
