@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { DrawContextProvider } from "./store/draw-context";
+import { ShowNavsContextProvider } from "./store/show-navs";
 
 ReactDOM.render(
   <React.StrictMode>
-    <DrawContextProvider>
-      <App />
-    </DrawContextProvider>
+    <ShowNavsContextProvider>
+      <DrawContextProvider>
+        <App />
+      </DrawContextProvider>
+    </ShowNavsContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

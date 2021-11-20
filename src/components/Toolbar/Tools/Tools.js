@@ -15,10 +15,10 @@ const Tools = () => {
 
   return (
     <div className={styles.tools}>
-      <button className={!drawContext.isErasing && styles.selected} onClick={pencilClickHandler}>
+      <button className={!drawContext.isErasing ? styles.selected : ""} onClick={pencilClickHandler}>
         <img src={pencil} alt="Pencil icon." />
       </button>
-      <button className={drawContext.isErasing && styles.selected} onClick={eraserClickHandler}>
+      <button className={drawContext.isErasing ? styles.selected : ""} onClick={eraserClickHandler}>
         <img src={eraser} alt="Eraser icon." />
       </button>
     </div>

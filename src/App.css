@@ -3,56 +3,196 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* END OF CSS RESET */
 
 * {
   box-sizing: border-box;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
 }
 
 body {
   overflow: hidden;
+}
+
+@media (max-width: 490px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+/* SHOW/HIDE NAVBAR ANIMATION */
+
+.navbar-enter {
+  transform: translate(-50%, -100%) !important;
+}
+.navbar-enter-active {
+  transform: translate(-50%, 0) !important;
+  transition: transform linear 300ms;
+}
+.navbar-enter-done {
+  transform: translate(-50%, 0) !important;
+}
+.navbar-exit {
+  transform: translate(-50%, 0) !important;
+}
+.navbar-exit-active {
+  transform: translate(-50%, -100%) !important;
+  transition: transform linear 300ms;
+}
+.navbar-exit-done {
+  transform: translate(-50%, -100%) !important;
+}
+
+/* SHOW/HIDE TOOLBAR ANIMATION */
+
+.toolbar-enter {
+  transform: translate(-50%, 6rem) !important;
+}
+.toolbar-enter-active {
+  transform: translate(-50%, 0) !important;
+  transition: transform linear 300ms;
+}
+.toolbar-enter-done {
+  transform: translate(-50%, 0) !important;
+}
+.toolbar-exit {
+  transform: translate(-50%, 0) !important;
+}
+.toolbar-exit-active {
+  transform: translate(-50%, 6rem) !important;
+  transition: transform linear 300ms;
+}
+.toolbar-exit-done {
+  transform: translate(-50%, 6rem) !important;
 }
