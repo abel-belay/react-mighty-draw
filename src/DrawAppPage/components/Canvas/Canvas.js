@@ -16,8 +16,17 @@ const Canvas = () => {
   }, []);
 
   const mouseDownHandler = (e) => {
+    let x = 0;
+    let y = 0;
+    if (e.nativeEvent.type === "touchstart") {
+      x = e.nativeEvent.targetTouches["0"].pageX;
+      y = e.nativeEvent.targetTouches["0"].pageY;
+    } else {
+      x = e.nativeEvent.offsetX;
+      y = e.nativeEvent.offsetY;
+    }
     let c = canvasRef.current.getContext("2d");
-    if (e.button === 0) {
+    if (e.button === 0 || e.nativeEvent.type === "touchstart") {
       c.lineCap = "round";
       isDrawing = true;
       c.beginPath();
@@ -27,16 +36,26 @@ const Canvas = () => {
         c.strokeStyle = drawContext.color;
       }
       c.lineWidth = drawContext.lineWidth;
-      c.moveTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
-      c.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
+      c.moveTo(x, y);
+      c.lineTo(x, y);
       c.stroke();
     }
   };
 
   const mouseMoveHandler = (e) => {
+    let x = 0;
+    let y = 0;
+    if (e.nativeEvent.type === "touchmove") {
+      x = e.nativeEvent.targetTouches["0"].pageX;
+      y = e.nativeEvent.targetTouches["0"].pageY;
+    } else {
+      x = e.nativeEvent.offsetX;
+      y = e.nativeEvent.offsetY;
+    }
     if (isDrawing) {
       let c = canvasRef.current.getContext("2d");
-      c.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
+      console.log(x, y);
+      c.lineTo(x, y);
       c.stroke();
     }
   };
@@ -104,8 +123,11 @@ const Canvas = () => {
       ref={canvasRef}
       id="canvas"
       onMouseDown={mouseDownHandler}
+      onTouchStart={mouseDownHandler}
       onMouseMove={mouseMoveHandler}
+      onTouchMove={mouseMoveHandler}
       onMouseUp={mouseUpHandler}
+      onTouchEnd={mouseUpHandler}
       onMouseOver={mouseOverHandler}
       onMouseLeave={mouseLeaveHandler}
       // onMouseLeave={mouseLeaveHandler}

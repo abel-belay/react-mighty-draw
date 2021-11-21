@@ -1,17 +1,48 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import Canvas from "./components/Canvas/Canvas";
-import Toolbar from "./components/Toolbar/Toolbar/Toolbar";
+import { DrawContextProvider } from "./DrawAppPage/store/draw-context";
+import { ShowNavsContextProvider } from "./DrawAppPage/store/show-navs";
+import DrawAppPage from "./DrawAppPage/components/DrawAppPage/DrawAppPage";
+import LandingPage from "./LandingPage/components/LandingPage/LandingPage";
 
 function App() {
   return (
-    <React.Fragment>
-      <Navbar />
-      <Canvas />
-      <Toolbar />
-    </React.Fragment>
+    <Router>
+      <Routes>
+        <Route
+          path="/draw"
+          exact
+          element={
+            <React.Fragment>
+              <ShowNavsContextProvider>
+                <DrawContextProvider>
+                  <DrawAppPage />
+                </DrawContextProvider>
+              </ShowNavsContextProvider>
+            </React.Fragment>
+          }
+        ></Route>
+
+        <Route
+          path="/*"
+          element={
+            <React.Fragment>
+              <LandingPage />
+            </React.Fragment>
+          }
+        />
+      </Routes>
+    </Router>
+
+    // <React.Fragment>
+    //   <LandingPage />
+    // </React.Fragment>
+
+    // <React.Fragment>
+    //   <DrawAppPage />
+    // </React.Fragment>
   );
 }
 
