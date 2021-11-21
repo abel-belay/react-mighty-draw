@@ -54,7 +54,6 @@ const Canvas = () => {
     }
     if (isDrawing) {
       let c = canvasRef.current.getContext("2d");
-      console.log(x, y);
       c.lineTo(x, y);
       c.stroke();
     }

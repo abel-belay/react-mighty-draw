@@ -9,9 +9,7 @@ const Navbar = () => {
         <h1>Mighty Draw</h1>
         <a href="/">FEATURES</a>
         <a href="/">TEAM</a>
-        <Link to="/draw">
-          <a href="/draw">GET DRAWING</a>
-        </Link>
+        <Link to="/draw">GET DRAWING</Link>
       </div>
     </nav>
   );
