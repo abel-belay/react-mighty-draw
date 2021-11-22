@@ -21,13 +21,6 @@ const Canvas = () => {
       },
       { passive: false }
     );
-    canvas.addEventListener(
-      "touchmove",
-      (e) => {
-        e.preventDefault();
-      },
-      { passive: false }
-    );
   }, []);
 
   const mouseDownHandler = (e) => {
@@ -145,7 +138,6 @@ const Canvas = () => {
       onTouchEnd={mouseUpHandler}
       onMouseOver={mouseOverHandler}
       onMouseLeave={mouseLeaveHandler}
-      // onMouseLeave={mouseLeaveHandler}
     />
   );
 };
