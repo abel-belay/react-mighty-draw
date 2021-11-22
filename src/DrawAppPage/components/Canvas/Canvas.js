@@ -1,5 +1,6 @@
 import { useRef, useEffect, useContext } from "react";
 import DrawContext from "../../store/draw-context";
+import styles from "./Canvas.module.css";
 
 const Canvas = () => {
   const drawContext = useContext(DrawContext);
@@ -13,6 +14,20 @@ const Canvas = () => {
     canvas.height = window.innerHeight;
     context.fillStyle = "white";
     context.fillRect(0, 0, canvas.width, canvas.height);
+    canvas.addEventListener(
+      "touchmove",
+      (e) => {
+        e.preventDefault();
+      },
+      { passive: false }
+    );
+    canvas.addEventListener(
+      "touchmove",
+      (e) => {
+        e.preventDefault();
+      },
+      { passive: false }
+    );
   }, []);
 
   const mouseDownHandler = (e) => {
@@ -93,7 +108,7 @@ const Canvas = () => {
       c.stroke();
     }
     isDrawing = false;
-  } 
+  };
 
   const mouseOverHandler = (e) => {
     let c = canvasRef.current.getContext("2d");
@@ -111,7 +126,7 @@ const Canvas = () => {
       c.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
       c.stroke();
     }
-  }
+  };
 
   window.addEventListener("resize", () => {
     windowResizeHandler();
@@ -121,6 +136,7 @@ const Canvas = () => {
     <canvas
       ref={canvasRef}
       id="canvas"
+      className={styles.canvas}
       onMouseDown={mouseDownHandler}
       onTouchStart={mouseDownHandler}
       onMouseMove={mouseMoveHandler}
@@ -130,7 +146,6 @@ const Canvas = () => {
       onMouseOver={mouseOverHandler}
       onMouseLeave={mouseLeaveHandler}
       // onMouseLeave={mouseLeaveHandler}
-      // className={styles.canvas}
     />
   );
 };
