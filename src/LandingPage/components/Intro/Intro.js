@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import styles from "./Intro.module.css";
 import Navbar from "../Navbar/Navbar";
@@ -20,7 +20,6 @@ const Intro = () => {
         </Link>
       </div>
     </section>
-
   );
 };
 

@@ -43,6 +43,14 @@ const FeatureList = () => {
       image: require("../../assets/test.gif").default,
       imageRight: false,
     },
+    {
+      id: "f6",
+      name: "Size Selector",
+      description:
+        "Lorem ipsum dolor...",
+      image: require("../../assets/test.gif").default,
+      imageRight: true,
+    },
   ];
 
   const featureComponentsList = FEATURES_DATA.map((feature) => (
