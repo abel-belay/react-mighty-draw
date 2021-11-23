@@ -1,5 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 
 import "./App.css";
 import { DrawContextProvider } from "./DrawAppPage/store/draw-context";
@@ -12,8 +16,7 @@ function App() {
     <Router>
       <Routes>
         <Route
-          path="/draw"
-          exact
+          path="draw"
           element={
             <React.Fragment>
               <ShowNavsContextProvider>
@@ -23,11 +26,9 @@ function App() {
               </ShowNavsContextProvider>
             </React.Fragment>
           }
-        ></Route>
-
+        />
         <Route
-          path="/landing"
-          exact
+          path="*"
           element={
             <React.Fragment>
               <LandingPage />
