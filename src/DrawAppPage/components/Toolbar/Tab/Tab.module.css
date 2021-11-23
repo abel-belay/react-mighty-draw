@@ -1,5 +1,7 @@
 .container {
   width: calc(12% + 8px);
+  min-width: 50px;
+  max-width: 150px;
   height: 2.6rem;
   position: absolute;
   left: 3%;
@@ -12,8 +14,6 @@
 
 .button {
   width: calc(100% - 8px);
-  min-width: 50px;
-  max-width: 150px;
   height: 2.4rem;
   padding: 0;
   display: flex;

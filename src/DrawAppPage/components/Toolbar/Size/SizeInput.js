@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import DrawContext from "../../../store/draw-context";
 import styles from "./SizeInput.module.css";
+import sliderMinMaxPNG from "../../../assets/slider-min-max.png";
 
 const SizeInput = () => {
   const drawContext = useContext(DrawContext);
@@ -11,9 +12,11 @@ const SizeInput = () => {
 
   return (
     <div className={styles["size-tool"]}>
-      <svg className={styles["min-size"]} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="50" fill="white" />
-      </svg>
+      <img
+        className={styles["min-size"]}
+        src={sliderMinMaxPNG}
+        alt="White circle representing minimun stroke size."
+      />
       <input
         onChange={sizeChangeHandler}
         className={styles.input}
@@ -23,9 +26,11 @@ const SizeInput = () => {
         step="1"
         value={drawContext.lineWidth}
       />
-      <svg className={styles["max-size"]} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="50" fill="white" />
-      </svg>
+      <img
+        className={styles["max-size"]}
+        src={sliderMinMaxPNG}
+        alt="White circle representing minimun stroke size."
+      />
     </div>
   );
 };

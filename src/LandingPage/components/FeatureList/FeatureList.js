@@ -22,7 +22,7 @@ const FeatureList = () => {
       id: "f3",
       name: "Image Export",
       description:
-        "Have a piece you’re proud of? With the image export feature, you can download a copy of your art to show off to all your friends, or keep all to yourself. (Feature in development)",
+        "Have a piece you’re proud of? With the image export feature, you can download a copy of your art to show off to all your friends, or keep all to yourself.",
       image: require("../../assets/save.gif").default,
       imageRight: true,
     },
