@@ -16,7 +16,7 @@ function App() {
     <Router>
       <Routes>
         <Route
-          path="draw"
+          path="/draw"
           element={
             <React.Fragment>
               <ShowNavsContextProvider>
