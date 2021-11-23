@@ -22,14 +22,14 @@ const LandingPage = () => {
   const zenModeShowcaseData = {
     name: "Introducing Zen Mode",
     description: "Now, even the header and footer can be put away, leaving nothing between you and your canvas. Nice.",
-    image: require("../../assets/pencil-eraser.gif").default
+    image: require("../../assets/zen-mode.gif").default
   }
 
   const devData = {
     imageRight: true,
-    name: "Meet the Developer",
-    description: "Hi, I'm Abel. Feel free to check out my Github or Linkedin. And thank you for visiting my web app.",
-    image: require("../../assets/drawing-demo.gif").default
+    name: "Hi, I'm Abel",
+    description: "I'm a self-taught web developer with a focus on React and MERN Stack. Feel free to check out my Github or Linkedin. And thank you for visiting my web app.",
+    image: require("../../assets/dev.gif").default
   }
 
   const body = document.body;
@@ -37,11 +37,11 @@ const LandingPage = () => {
   return (
     <div className={styles.page}>
       <Intro />
-      <Feature feature={drawFeatureData}/>
+      <Feature id="features" feature={drawFeatureData}/>
       <FullShowcase feature={pencilEraserShowcaseData} />
       <FeatureList />
       <FullShowcase feature={zenModeShowcaseData} />
-      <Feature feature={devData}/>
+      <Feature id="dev" feature={devData}/>
       <FixedButton />
     </div>
   );

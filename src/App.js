@@ -26,7 +26,8 @@ function App() {
         ></Route>
 
         <Route
-          path="/*"
+          path="/landing"
+          exact
           element={
             <React.Fragment>
               <LandingPage />
@@ -35,14 +36,6 @@ function App() {
         />
       </Routes>
     </Router>
-
-    // <React.Fragment>
-    //   <LandingPage />
-    // </React.Fragment>
-
-    // <React.Fragment>
-    //   <DrawAppPage />
-    // </React.Fragment>
   );
 }
 

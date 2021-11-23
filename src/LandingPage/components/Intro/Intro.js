@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 import styles from "./Intro.module.css";
 import Navbar from "../Navbar/Navbar";
@@ -12,9 +13,9 @@ const Intro = () => {
         <h3>Mighty Draw is a cool new tool to draw whatever you please.</h3>
       </div>
       <div className={styles.actions}>
-        <Link to="/draw">
+        <HashLink smooth to="#features">
           <button>Take the Tour</button>
-        </Link>
+        </HashLink>
         <Link to="/draw">
           <button>Get Drawing</button>
         </Link>

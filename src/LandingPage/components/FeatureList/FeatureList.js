@@ -5,51 +5,34 @@ const FeatureList = () => {
   const FEATURES_DATA = [
     {
       id: "f1",
-      name: "Pencil & Eraser Selectors",
+      name: "Color Palette",
       description:
-        "Mighty Draw is a cool new tool to draw whatever you please. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      image: require("../../assets/test.gif").default,
-      imageRight: false,
+        "Mighty Draw provides a range of colors for you to choose from. Just select the color you need from the color pallete. Mighty Draw adapts to your color choice so you never forget what color your using.",
+      image: require("../../assets/color-selector.gif").default,
+      imageRight: true,
     },
     {
       id: "f2",
-      name: "Color Selector",
-      description:
-        "Mighty Draw is a cool new tool to draw whatever you please. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      image: require("../../assets/test.gif").default,
-      imageRight: true,
+      name: "Size Selector",
+      description: "Thin stroke? Thick stroke? Something in between? With our size selector, the choice is yours. Just use the slider in the bottom right to get the size you need.",
+      image: require("../../assets/size-selector.gif").default,
+      imageRight: false,
     },
     {
       id: "f3",
-      name: "Zen Mode",
+      name: "Image Export",
       description:
-        "Mighty Draw is all about given you a clean, minimal interface. This means that even the header and footer can be put away. Enter Zen Mode to hide everything that stands between you and your canvas.",
+        "Have a piece you’re proud of? With the image export feature, you can download a copy of your art to show off to all your friends, or keep all to yourself. (Feature in development)",
       image: require("../../assets/test.gif").default,
-      imageRight: false,
+      imageRight: true,
     },
     {
       id: "f4",
-      name: "Image Export",
-      description:
-        "Have a piece you’re proud of? With the image export feature, you can download a copy of your art to show off to all your friends, or keep all to yourself.",
-      image: require("../../assets/test.gif").default,
-      imageRight: true,
-    },
-    {
-      id: "f5",
       name: "Clear Canvas",
       description:
-        "Need a fresh start? No problem. With the clear canvas feature, a clean canvas is one click away. Just press the (clear canvas) button to clear your canvas.",
+        "Need a fresh start? No problem. With the clear canvas feature, a clean canvas is one click away. Just press the (clear canvas) button to clear your canvas. (Feature in development)",
       image: require("../../assets/test.gif").default,
       imageRight: false,
-    },
-    {
-      id: "f6",
-      name: "Size Selector",
-      description:
-        "Lorem ipsum dolor...",
-      image: require("../../assets/test.gif").default,
-      imageRight: true,
     },
   ];
 

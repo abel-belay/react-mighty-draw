@@ -4,7 +4,7 @@ const Feature = (props) => {
   const { feature } = props;
 
   return (
-    <section
+    <section id={props.id ? props.id : ""}
       className={`${styles.feature} ${
         feature.imageRight ? styles.imageRight : styles.imageLeft
       }`}
