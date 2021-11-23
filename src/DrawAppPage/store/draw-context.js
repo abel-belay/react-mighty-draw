@@ -13,6 +13,8 @@ export const DrawContextProvider = (props) => {
     isErasing: false,
   });
 
+  const [canvasRef, setCanvasRef] = useState(null);
+
   const colorChangeHandler = (color) => {
     setDrawData((drawData) => ({
       ...drawData,
@@ -44,6 +46,8 @@ export const DrawContextProvider = (props) => {
   return (
     <DrawContext.Provider
       value={{
+        canvasRef: canvasRef,
+        setCanvasRef: setCanvasRef,
         color: drawData.color,
         lineWidth: drawData.lineWidth,
         isErasing: drawData.isErasing,

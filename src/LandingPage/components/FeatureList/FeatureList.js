@@ -23,15 +23,15 @@ const FeatureList = () => {
       name: "Image Export",
       description:
         "Have a piece you’re proud of? With the image export feature, you can download a copy of your art to show off to all your friends, or keep all to yourself. (Feature in development)",
-      image: require("../../assets/test.gif").default,
+      image: require("../../assets/save.gif").default,
       imageRight: true,
     },
     {
       id: "f4",
       name: "Clear Canvas",
       description:
-        "Need a fresh start? No problem. With the clear canvas feature, a clean canvas is one click away. Just press the (clear canvas) button to clear your canvas. (Feature in development)",
-      image: require("../../assets/test.gif").default,
+        "Need a fresh start? No problem. With the clear canvas feature, a clean canvas is one click away. Just press the clear canvas button to clear your canvas.",
+      image: require("../../assets/clear.gif").default,
       imageRight: false,
     },
   ];

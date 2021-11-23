@@ -3,6 +3,7 @@ import DrawContext from "../../store/draw-context";
 import styles from "./Canvas.module.css";
 
 const Canvas = () => {
+  console.log("canvas rendered");
   const drawContext = useContext(DrawContext);
   let isDrawing = false;
   const canvasRef = useRef();
@@ -14,6 +15,7 @@ const Canvas = () => {
     canvas.height = window.innerHeight;
     context.fillStyle = "white";
     context.fillRect(0, 0, canvas.width, canvas.height);
+    drawContext.setCanvasRef(canvas);
     canvas.addEventListener(
       "touchmove",
       (e) => {
@@ -76,24 +78,6 @@ const Canvas = () => {
     isDrawing = false;
   };
 
-  const windowResizeHandler = () => {
-    const canvas = document.getElementById("canvas");
-    if (
-      window.innerWidth > canvas.width ||
-      window.innerHeight > canvas.height
-    ) {
-      const canvasCtx = canvas.getContext("2d");
-      const transferCanvas = document.createElement("canvas");
-      const transferCanvasCtx = transferCanvas.getContext("2d");
-      transferCanvas.width = canvas.width;
-      transferCanvas.height = canvas.height;
-      transferCanvasCtx.drawImage(canvas, 0, 0);
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      canvasCtx.drawImage(transferCanvas, 0, 0);
-    }
-  };
-
   const mouseLeaveHandler = (e) => {
     if (isDrawing) {
       let c = canvasRef.current.getContext("2d");
@@ -118,6 +102,24 @@ const Canvas = () => {
       c.moveTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
       c.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
       c.stroke();
+    }
+  };
+
+  const windowResizeHandler = () => {
+    const canvas = document.getElementById("canvas");
+    if (
+      window.innerWidth > canvas.width ||
+      window.innerHeight > canvas.height
+    ) {
+      const canvasCtx = canvas.getContext("2d");
+      const transferCanvas = document.createElement("canvas");
+      const transferCanvasCtx = transferCanvas.getContext("2d");
+      transferCanvas.width = canvas.width;
+      transferCanvas.height = canvas.height;
+      transferCanvasCtx.drawImage(canvas, 0, 0);
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      canvasCtx.drawImage(transferCanvas, 0, 0);
     }
   };
 

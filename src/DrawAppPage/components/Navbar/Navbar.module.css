@@ -17,10 +17,11 @@
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
 }
 
-.navbar h1 {
+.navbar > a {
   padding-bottom: 1rem;
   font-family: "Pacifico", cursive;
   font-size: 3rem;
+  text-decoration: none;
   color: rgba(255, 255, 255, 0.95);
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -29,11 +30,24 @@
   height: 3rem;
 }
 
-.logos img {
+.logos button {
   height: 100%;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.logos button:hover {
+  cursor: pointer;
+}
+.logos button {
+  margin-left: 1rem;
+}
+.logos button:first-child {
+  margin-left: 0rem;
 }
 
-.logos img:last-child {
-  margin-left: 1rem;
+.logos button img {
+  height: 100%;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }

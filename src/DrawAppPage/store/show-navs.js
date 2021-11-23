@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-const ShowNavsContext = React.createContext({});
+const ShowNavsContext = React.createContext({
+  showNavs: true
+});
 
 export const ShowNavsContextProvider = (props) => {
   const [showNavs, setShowNavs] = useState(true);
