@@ -10,7 +10,7 @@ const Intro = () => {
       <Navbar />
       <div className={styles.title}>
         <h2>A Simple, Clean, and Intuitive Drawing Experience</h2>
-        <h3>Mighty Draw is a cool new tool to draw whatever you please.</h3>
+        <h3>Mighty Draw is a minimal yet flexible drawing app for making art no matter the device you’re on.<br />Made with React and the Canvas API.</h3>
       </div>
       <div className={styles.actions}>
         <HashLink smooth to="#features">

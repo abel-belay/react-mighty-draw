@@ -13,6 +13,7 @@
 
 .title {
   width: 78%;
+  min-width: 280px;
 }
 
 .title h2 {
@@ -22,19 +23,24 @@
 
 .title h3 {
   font-size: 1.4rem;
+  line-height: 2rem;
   color: #323232;
 }
 
 .actions {
   width: 78%;
+  min-width: 280px;
   max-width: 1500px;
-  margin-top: 4.8rem;
+  margin: 4.8rem 0 2rem 0;
+}
+
+.actions a {
+  margin-right: 1rem;
 }
 
 .actions button {
-  width: 11.3rem;
+  width: 10.5rem;
   height: 2.8rem;
-  margin-right: 2rem;
 
   border-radius: 15px;
   border: none;
@@ -43,4 +49,10 @@
   color: white;
   background-color: #0083CC;
   cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .intro {
+    height: 45rem;
+  }
 }
