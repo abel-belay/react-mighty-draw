@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import {CSSTransition} from "react-transition-group";
 
 import styles from "./Toolbar.module.css";
@@ -12,11 +12,24 @@ import ShowNavsContext from "../../../store/show-navs";
 const Toolbar = () => {
   const drawContext = useContext(DrawContext);
   const showNavsContext = useContext(ShowNavsContext);
+
+  useEffect(() => {
+    const toolbar = document.getElementById("toolbar");
+    toolbar.addEventListener(
+      "touchmove",
+      (e) => {
+        e.preventDefault();
+      },
+      { passive: false }
+    );
+  }, [])
+
   return (
     <CSSTransition
       in={showNavsContext.showNavs}
       timeout={300}
       classNames="toolbar"
+      id="toolbar"
     >
       <div
         className={styles.toolbar}

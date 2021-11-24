@@ -1,3 +1,4 @@
+<div id="top"></div>
 <p align="center">
   <a href="https://mighty-draw.netlify.app">
     <img alt="Mighty Draw logo." src="https://github.com/abel-belay/react-mighty-draw/blob/master/public/mighty-draw-logo.png" width="100" />
@@ -8,8 +9,7 @@
 </h1>
 
 <h4 align="center">
-  <a href="https://mighty-draw.netlify.app">Live Site</a> |
-  <a href="https://www.linkedin.com/in/abel-belay-ab5b50221">Developer's Linkedin</a>
+  <a href="https://mighty-draw.netlify.app">Live Site</a>
 </h4>
 
 <p align="center">
@@ -29,11 +29,13 @@ https://mighty-draw.netlify.app
    ```bash
    npm install
    ```
-3. **Locally Deploy the App In Developemnt Mode**
+3. **Locally Deploy the App In Development Mode**
    ```bash
    npm start
    ```
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 ## ⭐️ Features
@@ -60,6 +62,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 **Zen Mode**
 <p>Even the header and footer can be put away, leaving nothing between you and your canvas.</p>
 <img alt="GIF of color palette feature." src="https://github.com/abel-belay/react-mighty-draw/blob/master/src/LandingPage/assets/zen-mode.gif" width="300" />
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 ## 👨🏾‍💻 Meet the Developer
@@ -97,4 +101,11 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Acknowledgments
+
+* [Create React App](https://github.com/facebook/create-react-app)
+* [Google Fonts](https://fonts.google.com/)
+
+<p align="right">(<a href="#top">back to top</a>)</p>

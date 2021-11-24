@@ -27,11 +27,32 @@
   color: #323232;
 }
 
+.links {
+  width: 78%;
+  min-width: 280px;
+  max-width: 1500px;
+  margin: 1rem 0;
+}
+
+.links a {
+  margin-right: 1rem;
+}
+.links a:last-child {
+  margin-right: 0;
+}
+
+.links img {
+  width: 6%;
+  min-width: 20px;
+  max-width: 40px;
+  filter: brightness(0);
+}
+
 .actions {
   width: 78%;
   min-width: 280px;
   max-width: 1500px;
-  margin: 4.8rem 0 2rem 0;
+  margin: 4.2rem 0 2rem 0;
 }
 
 .actions a {
@@ -54,5 +75,17 @@
 @media (max-width: 500px) {
   .intro {
     height: 45rem;
+  }
+
+  .title h2 {
+    font-size: 2.5rem;
+  }
+
+  .title h3 {
+    font-size: 1.4rem;
+  }
+  
+  .actions {
+    margin-top: 4rem;
   }
 }

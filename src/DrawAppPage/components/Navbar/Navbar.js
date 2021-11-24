@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 
 import styles from "./Navbar.module.css";
@@ -28,11 +28,23 @@ const Navbar = () => {
     link.remove();
   };
 
+  useEffect(() => {
+    const navbar = document.getElementById("navbar");
+    navbar.addEventListener(
+      "touchmove",
+      (e) => {
+        e.preventDefault();
+      },
+      { passive: false }
+    );
+  }, [])
+
   return (
     <CSSTransition
       in={showNavsContext.showNavs}
       timeout={300}
       classNames="navbar"
+      id="navbar"
     >
       <div
         className={styles.navbar}
