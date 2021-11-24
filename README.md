@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://mighty-draw.nelify.app">
+  <a href="https://mighty-draw.netlify.app">
     <img alt="Mighty Draw logo." src="https://github.com/abel-belay/react-mighty-draw/blob/master/public/mighty-draw-logo.png" width="100" />
   </a>
 </p>
@@ -8,7 +8,7 @@
 </h1>
 
 <h4 align="center">
-  <a href="https://mighty-draw.nelify.app">Live Site</a> |
+  <a href="https://mighty-draw.netlify.app">Live Site</a> |
   <a href="https://www.linkedin.com/in/abel-belay-ab5b50221">Developer's Linkedin</a>
 </h4>
 
@@ -17,7 +17,7 @@ Mighty Draw is a minimal yet flexible drawing app for making art no matter the d
 </p>
 
 ## 🖥 Live Site
-https://mighty-draw.nelify.app
+https://mighty-draw.netlify.app
 
 
 ## 🚀 Development Quickstart
@@ -38,16 +38,28 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## ⭐️ Features
 **Pencil & Eraser**
-The classics. The pencil and eraser are always avaiable at the bottom left whenever you need them.
+<p>The classics. The pencil and eraser are always avaiable at the bottom left whenever you need them.</p>
 <img alt="GIF of pencil and eraser feature." src="https://github.com/abel-belay/react-mighty-draw/blob/master/src/LandingPage/assets/pencil-eraser.gif" width="300" />
 
 **Color Palette**
-Mighty Draw provides a range of colors for you to choose from. Just select the color you need from the color pallete. Mighty Draw adapts to your color choice so you never forget what color your using.
+<p>Mighty Draw provides a range of colors for you to choose from. Just select the color you need from the color pallete. Mighty Draw adapts to your color choice so you never forget what color your using.</p>
 <img alt="GIF of color palette feature." src="https://github.com/abel-belay/react-mighty-draw/blob/master/src/LandingPage/assets/color-selector.gif" width="300" />
 
 **Size Selector**
-Thin stroke? Thick stroke? Something in between? With our size selector, the choice is yours. Just use the slider in the bottom right to get the size you need.
-<img alt="GIF of color palette feature." src="https://github.com/abel-belay/react-mighty-draw/blob/master/src/LandingPage/assets/color-selector.gif" width="300" />
+<p>Thin stroke? Thick stroke? Something in between? With our size selector, the choice is yours. Just use the slider in the bottom right to get the size you need.</p>
+<img alt="GIF of color palette feature." src="https://github.com/abel-belay/react-mighty-draw/blob/master/src/LandingPage/assets/size-selector.gif" width="300" />
+
+**Image Export**
+<p>Have a piece you’re proud of? With the image export feature, you can download a copy of your art to show off to all your friends, or keep all to yourself.</p>
+<img alt="GIF of color palette feature." src="https://github.com/abel-belay/react-mighty-draw/blob/master/src/LandingPage/assets/save.gif" width="300" />
+
+**Clear Canvas**
+<p>Need a fresh start? No problem. With the clear canvas feature, a clean canvas is one click away. Just press the clear canvas button to clear your canvas.</p>
+<img alt="GIF of color palette feature." src="https://github.com/abel-belay/react-mighty-draw/blob/master/src/LandingPage/assets/clear.gif" width="300" />
+
+**Zen Mode**
+<p>Even the header and footer can be put away, leaving nothing between you and your canvas.</p>
+<img alt="GIF of color palette feature." src="https://github.com/abel-belay/react-mighty-draw/blob/master/src/LandingPage/assets/zen-mode.gif" width="300" />
 
 
 ## 👨🏾‍💻 Meet the Developer

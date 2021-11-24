@@ -6,9 +6,9 @@ import linkedinLogoPNG from "../../assets/linkedin-logo.png";
 const DevSection = () => {
   const feature = {
     imageRight: true,
-    name: "Hi, I'm Abel",
+    name: "Meet the Developer",
     description:
-      "I'm a self-taught web developer with a focus on React and MERN Stack. Feel free to check out my Github or Linkedin. And thank you for visiting my web app.",
+      "Hi, I'm Abel. I'm a self-taught web developer with a focus on React and MERN Stack. Feel free to check out my Github or Linkedin. And thank you for visiting my web app.",
     image: require("../../assets/dev.gif").default,
   };
 
