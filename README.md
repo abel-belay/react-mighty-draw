@@ -1,6 +1,36 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://mighty-draw.nelify.app">
+    <img alt="Mighty Draw logo." src="https://github.com/abel-belay/react-mighty-draw/blob/master/mighty-draw-logo.png.jpg?raw=true" width="100" />
+  </a>
+</p>
+<h1 align="center">
+  Mighty Draw
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4 align="center">
+  <a href="https://mighty-draw.nelify.app">Live Site</a> |
+  <a href="https://www.linkedin.com/in/abel-belay-ab5b50221">Developer Linkedin</a>
+</h4>
+
+<p align="center">
+Mighty Draw is a ?
+</p>
+
+## Live Site
+https://mighty-draw.nelify.app
+
+
+## 🚀 Development Quickstart
+1. **Clone Local Copy Using Github CLI**
+```gh repo clone abel-belay/react-mighty-draw```
+
+2. **Run App In Developemnt Mode**
+```npm start```
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## ⭐️ Features
+**Feature 1**
+![Alt Text](https://github.com/abel-belay/react-mighty-draw/blob/master/src/LandingPage/assets/pencil-eraser.gif)
 
 ## Available Scripts
 
@@ -68,3 +98,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
