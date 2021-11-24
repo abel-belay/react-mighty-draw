@@ -18,6 +18,7 @@ const SizeInput = () => {
         alt="White circle representing minimun stroke size."
       />
       <input
+        id="size-input"
         onChange={sizeChangeHandler}
         className={styles.input}
         type="range"

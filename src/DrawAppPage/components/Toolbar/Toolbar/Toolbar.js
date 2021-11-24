@@ -18,7 +18,9 @@ const Toolbar = () => {
     toolbar.addEventListener(
       "touchmove",
       (e) => {
-        e.preventDefault();
+        if (e.target.id !== "size-input") {
+          e.preventDefault();
+        }
       },
       { passive: false }
     );
