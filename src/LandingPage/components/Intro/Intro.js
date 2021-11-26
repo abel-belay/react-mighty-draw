@@ -9,6 +9,7 @@ import linkedinLogoPNG from "../../assets/linkedin-logo.png";
 const Intro = () => {
   return (
     <section className={styles.intro}>
+      <div className={styles.content}>
       <Navbar />
       <div className={styles.title}>
         <h2>A Simple, Clean, and Intuitive Drawing Experience</h2>
@@ -34,6 +35,7 @@ const Intro = () => {
         <Link to="/draw">
           <button>Get Drawing</button>
         </Link>
+      </div>
       </div>
     </section>
   );

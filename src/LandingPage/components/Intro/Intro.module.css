@@ -1,14 +1,20 @@
 .intro {
   width: 100vw;
+  height: 35rem;
+  display: flex;
+  justify-content: center;
+  background-color: #FBFBFB;
+  border-bottom: 1px solid #DEDEDE;
+}
+
+.content {
+  width: 100vw;
   max-width: 1500px;
   height: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  font-family: 'Nunito', sans-serif;
-  background-color: #FBFBFB;
-  border-bottom: 1px solid #DEDEDE;
+  font-family: "Nunito",sans-serif;
 }
 
 .title {
@@ -74,6 +80,9 @@
 
 @media (max-width: 500px) {
   .intro {
+    height: 45rem;
+  }
+  .content {
     height: 45rem;
   }
 
